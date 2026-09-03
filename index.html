@@ -148,6 +148,11 @@ footer{background:#000; color:rgba(255,255,255,0.55); padding:30px 0; border-top
 .proj-nav a{font-family:'Fraunces',serif; font-size:22px;}
 .proj-nav .lbl{display:block; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--gray); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:8px;}
 
+.lang-switch{display:flex; align-items:center; gap:2px; border:1px solid var(--line); border-radius:99px; padding:3px; margin-left:8px;}
+.lang-btn{font-family:'IBM Plex Mono',monospace; font-size:11px; padding:5px 11px; border-radius:99px; border:none; background:none; color:var(--gray); cursor:pointer; transition:background .2s ease, color .2s ease;}
+.lang-btn.active{background:var(--ink); color:var(--paper);}
+@media (max-width:760px){ .lang-switch{margin:10px 0 0;} }
+
 .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
 .reveal.in{opacity:1; transform:translateY(0);}/* ===== LiquidEther-lite (hafif canvas blob arka planı) ===== */
 .hero{position:relative; overflow:hidden;}
@@ -208,16 +213,20 @@ footer{background:#000; color:rgba(255,255,255,0.55); padding:30px 0; border-top
 <body>
 
 <div class="crop tl"></div><div class="crop tr"></div><div class="crop bl"></div><div class="crop br"></div>
-<a href="#mainContent" class="skip-link">İçeriğe atla</a>
+<a href="#mainContent" class="skip-link" data-tr="İçeriğe atla" data-en="Skip to content">İçeriğe atla</a>
 <header id="siteHeader">
   <nav class="wrap" aria-label="Ana menü">
     <a href="index.html" class="brand">Armağan Alimler</a>
     <button class="menu-btn" id="menuBtn" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navLinks" type="button"><span></span><span></span><span></span></button>
     <div class="navlinks" id="navLinks">
-      <a href="index.html#isler">İşler</a>
-      <a href="index.html#hakkimda">Hakkımda</a>
-      <a href="index.html#deneyim">Deneyim</a>
-      <a href="index.html#iletisim" class="nav-cta">İletişim</a>
+      <a href="index.html#isler" data-tr="İşler" data-en="Work">İşler</a>
+      <a href="index.html#hakkimda" data-tr="Hakkımda" data-en="About">Hakkımda</a>
+      <a href="index.html#deneyim" data-tr="Deneyim" data-en="Experience">Deneyim</a>
+      <a href="index.html#iletisim" class="nav-cta" data-tr="İletişim" data-en="Contact">İletişim</a>
+      <div class="lang-switch" role="group" aria-label="Dil seçimi">
+        <button class="lang-btn" data-lang="tr" type="button">TR</button>
+        <button class="lang-btn" data-lang="en" type="button">EN</button>
+      </div>
     </div>
   </nav>
 </header>
@@ -228,9 +237,9 @@ footer{background:#000; color:rgba(255,255,255,0.55); padding:30px 0; border-top
 <section class="hero">
   <canvas class="liquid-bg" id="liquidBg" aria-hidden="true"></canvas>
   <div class="wrap reveal hero-inner">
-    <div class="kicker">Grafik Tasarımcı — İstanbul</div>
-    <h1>Paketleme ve marka kimliğinde iz bırakan tasarımlar.</h1>
-    <p class="hero-sub">4+ yıldır tüketici ürünleri ve teknoloji markaları için paketleme, marka kimliği ve e-ticaret görselleri tasarlıyorum.</p>
+    <div class="kicker" data-tr="Grafik Tasarımcı — İstanbul" data-en="Graphic Designer — Istanbul">Grafik Tasarımcı — İstanbul</div>
+    <h1 data-tr="Paketleme ve marka kimliğinde iz bırakan tasarımlar." data-en="Design work that leaves a mark in packaging and brand identity.">Paketleme ve marka kimliğinde iz bırakan tasarımlar.</h1>
+    <p class="hero-sub" data-tr="4+ yıldır tüketici ürünleri ve teknoloji markaları için paketleme, marka kimliği ve e-ticaret görselleri tasarlıyorum." data-en="For 4+ years I've been designing packaging, brand identity and e-commerce visuals for consumer and technology brands.">4+ yıldır tüketici ürünleri ve teknoloji markaları için paketleme, marka kimliği ve e-ticaret görselleri tasarlıyorum.</p>
     <div class="flap-row" id="flapRow" aria-hidden="true"></div>
     <div class="hero-meta">
       <a href="https://www.behance.net/armaganalimler" target="_blank" rel="noopener">Behance ↗</a>
@@ -252,11 +261,11 @@ footer{background:#000; color:rgba(255,255,255,0.55); padding:30px 0; border-top
       <img src="assets/work/ozko/ozko-cover.jpg" alt="OZKO by Özge Köse projesinden bir kare">
       <div class="expand-scrim"></div>
       <div class="expand-text" id="expandText">
-        <div class="kicker2">Öne Çıkan</div>
-        <h2>Her piksel, her yerde.</h2>
+        <div class="kicker2" data-tr="Öne Çıkan" data-en="Featured">Öne Çıkan</div>
+        <h2 data-tr="Her piksel, her yerde." data-en="Every pixel, everywhere.">Her piksel, her yerde.</h2>
       </div>
     </div>
-    <div class="expand-hint" id="expandHint">Kaydırın</div>
+    <div class="expand-hint" id="expandHint" data-tr="Kaydırın" data-en="Scroll">Kaydırın</div>
   </div>
 </div>
 
@@ -267,58 +276,58 @@ footer{background:#000; color:rgba(255,255,255,0.55); padding:30px 0; border-top
 <section id="isler">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="kicker">Seçilmiş Projeler</div>
-      <h2>İşler</h2>
-      <p>Her proje kendi sayfasında, Behance'teki akışına sadık kalarak.</p>
+      <div class="kicker" data-tr="Seçilmiş Projeler" data-en="Selected Projects">Seçilmiş Projeler</div>
+      <h2 data-tr="İşler" data-en="Work">İşler</h2>
+      <p data-tr="Her proje kendi sayfasında, Behance'teki akışına sadık kalarak." data-en="Each project has its own page, staying true to its flow on Behance.">Her proje kendi sayfasında, Behance'teki akışına sadık kalarak.</p>
     </div>
   </div>
   <div class="work-grid">
     <a class="work-item reveal" href="xenon.html">
       <div class="imgbox"><img src="assets/work/xenon/xenon-1-cover.webp" alt="Xenon Smart" loading="lazy"></div>
       <div class="cap">
-        <div><h3>Xenon Smart</h3><div class="role">Paketleme Tasarımı</div></div>
+        <div><h3>Xenon Smart</h3><div class="role" data-tr="Paketleme Tasarımı" data-en="Packaging Design">Paketleme Tasarımı</div></div>
         <div class="num">01</div>
       </div>
     </a>
     <a class="work-item reveal" href="kiwi-packaging.html">
       <div class="imgbox"><img src="assets/work/kiwi-packaging/kiwi-13-vacuum-box-pair.webp" alt="Kiwi — Paketleme" loading="lazy"></div>
       <div class="cap">
-        <div><h3>Kiwi — Paketleme</h3><div class="role">Paketleme &amp; Etiket Tasarımı</div></div>
+        <div><h3>Kiwi — Paketleme</h3><div class="role" data-tr="Paketleme &amp; Etiket Tasarımı" data-en="Packaging &amp; Label Design">Paketleme &amp; Etiket Tasarımı</div></div>
         <div class="num">02</div>
       </div>
     </a>
     <a class="work-item reveal" href="kiwi-social.html">
       <div class="imgbox"><img src="assets/work/kiwi-social/kiwi-16-social-cover.webp" alt="Kiwi &amp; Aprilla" loading="lazy"></div>
       <div class="cap">
-        <div><h3>Kiwi &amp; Aprilla</h3><div class="role">Sosyal Medya Tasarımı</div></div>
+        <div><h3>Kiwi &amp; Aprilla</h3><div class="role" data-tr="Sosyal Medya Tasarımı" data-en="Social Media Design">Sosyal Medya Tasarımı</div></div>
         <div class="num">03</div>
       </div>
     </a>
     <a class="work-item reveal" href="ecrou.html">
       <div class="imgbox"><img src="assets/work/ecrou/ecrou-1-brand.webp" alt="Ecrou" loading="lazy"></div>
       <div class="cap">
-        <div><h3>Ecrou</h3><div class="role">Marka Kimliği &amp; Paketleme</div></div>
+        <div><h3>Ecrou</h3><div class="role" data-tr="Marka Kimliği &amp; Paketleme" data-en="Brand Identity &amp; Packaging">Marka Kimliği &amp; Paketleme</div></div>
         <div class="num">04</div>
       </div>
     </a>
     <a class="work-item reveal" href="hukuk.html">
       <div class="imgbox"><img src="assets/work/hukuk/hukuk-1-logo.webp" alt="Berru Toğaç Hukuk Bürosu" loading="lazy"></div>
       <div class="cap">
-        <div><h3>Berru Toğaç Hukuk Bürosu</h3><div class="role">Logo &amp; Marka Kimliği</div></div>
+        <div><h3>Berru Toğaç Hukuk Bürosu</h3><div class="role" data-tr="Logo &amp; Marka Kimliği" data-en="Logo &amp; Brand Identity">Logo &amp; Marka Kimliği</div></div>
         <div class="num">05</div>
       </div>
     </a>
     <a class="work-item reveal" href="ozko.html">
       <div class="imgbox"><img src="assets/work/ozko/ozko-cover.jpg" alt="OZKO by Özge Köse" loading="lazy"></div>
       <div class="cap">
-        <div><h3>OZKO by Özge Köse</h3><div class="role">Marka Kimliği &amp; Katalog</div></div>
+        <div><h3>OZKO by Özge Köse</h3><div class="role" data-tr="Marka Kimliği &amp; Katalog" data-en="Brand Identity &amp; Catalog">Marka Kimliği &amp; Katalog</div></div>
         <div class="num">06</div>
       </div>
     </a>
     <a class="work-item reveal" href="ahmetrusan.html">
       <div class="imgbox"><img src="assets/work/ahmetrusan/ar-1-logo-process.webp" alt="Ahmet Ruşan" loading="lazy"></div>
       <div class="cap">
-        <div><h3>Ahmet Ruşan</h3><div class="role">Logo, Kimlik &amp; Video</div></div>
+        <div><h3>Ahmet Ruşan</h3><div class="role" data-tr="Logo, Kimlik &amp; Video" data-en="Logo, Identity &amp; Video">Logo, Kimlik &amp; Video</div></div>
         <div class="num">07</div>
       </div>
     </a>
@@ -329,24 +338,24 @@ footer{background:#000; color:rgba(255,255,255,0.55); padding:30px 0; border-top
   <div class="wrap">
     <div class="about-grid reveal">
       <div>
-        <div class="kicker mono" style="font-size:11.5px; text-transform:uppercase; letter-spacing:0.14em; color:var(--gray); margin-bottom:14px;">Hakkımda</div>
-        <h2 style="font-size:clamp(26px,3.2vw,36px);">Marka ve ürünün kesiştiği yerde tasarlıyorum.</h2>
-        <p style="margin-top:20px;">4+ yıldır tüketici ürünleri ve teknoloji markaları için paketleme, marka kimliği ve e-ticaret tasarımı üretiyorum. Marketplace görsellerinden sosyal medya kampanyalarına, farklı çevrimiçi ve fiziksel perakende kanallarında tutarlı bir marka deneyimi kurmaya odaklanıyorum.</p>
+        <div class="kicker mono" style="font-size:11.5px; text-transform:uppercase; letter-spacing:0.14em; color:var(--gray); margin-bottom:14px;" data-tr="Hakkımda" data-en="About">Hakkımda</div>
+        <h2 style="font-size:clamp(26px,3.2vw,36px);" data-tr="Marka ve ürünün kesiştiği yerde tasarlıyorum." data-en="I design at the intersection of brand and product.">Marka ve ürünün kesiştiği yerde tasarlıyorum.</h2>
+        <p style="margin-top:20px;" data-tr="4+ yıldır tüketici ürünleri ve teknoloji markaları için paketleme, marka kimliği ve e-ticaret tasarımı üretiyorum. Marketplace görsellerinden sosyal medya kampanyalarına, farklı çevrimiçi ve fiziksel perakende kanallarında tutarlı bir marka deneyimi kurmaya odaklanıyorum." data-en="I have 4+ years of experience in packaging, branding, and e-commerce design for consumer products and technology brands. From marketplace visuals to social media campaigns, I focus on delivering a consistent brand experience across online and offline retail channels.">4+ yıldır tüketici ürünleri ve teknoloji markaları için paketleme, marka kimliği ve e-ticaret tasarımı üretiyorum. Marketplace görsellerinden sosyal medya kampanyalarına, farklı çevrimiçi ve fiziksel perakende kanallarında tutarlı bir marka deneyimi kurmaya odaklanıyorum.</p>
       </div>
       <div>
-        <div class="kicker mono" style="font-size:11.5px; text-transform:uppercase; letter-spacing:0.14em; color:var(--gray); margin-bottom:14px;">Yetkinlikler</div>
+        <div class="kicker mono" style="font-size:11.5px; text-transform:uppercase; letter-spacing:0.14em; color:var(--gray); margin-bottom:14px;" data-tr="Yetkinlikler" data-en="Skills">Yetkinlikler</div>
         <div class="skill-tags">
-          <span class="skill-tag">Paketleme &amp; Etiket Tasarımı</span>
-          <span class="skill-tag">Marka Kimliği</span>
-          <span class="skill-tag">E-ticaret &amp; Marketplace</span>
-          <span class="skill-tag">Sosyal Medya Tasarımı</span>
-          <span class="skill-tag">Logo Tasarımı</span>
+          <span class="skill-tag" data-tr="Paketleme &amp; Etiket Tasarımı" data-en="Packaging &amp; Label Design">Paketleme &amp; Etiket Tasarımı</span>
+          <span class="skill-tag" data-tr="Marka Kimliği" data-en="Brand Identity">Marka Kimliği</span>
+          <span class="skill-tag" data-tr="E-ticaret &amp; Marketplace" data-en="E-commerce &amp; Marketplace">E-ticaret &amp; Marketplace</span>
+          <span class="skill-tag" data-tr="Sosyal Medya Tasarımı" data-en="Social Media Design">Sosyal Medya Tasarımı</span>
+          <span class="skill-tag" data-tr="Logo Tasarımı" data-en="Logo Design">Logo Tasarımı</span>
           <span class="skill-tag">Photoshop</span>
           <span class="skill-tag">Illustrator</span>
           <span class="skill-tag">InDesign</span>
           <span class="skill-tag">After Effects</span>
           <span class="skill-tag">Figma</span>
-          <span class="skill-tag">AI Destekli Tasarım</span>
+          <span class="skill-tag" data-tr="AI Destekli Tasarım" data-en="AI-assisted Design">AI Destekli Tasarım</span>
         </div>
       </div>
     </div>
@@ -356,33 +365,33 @@ footer{background:#000; color:rgba(255,255,255,0.55); padding:30px 0; border-top
 <section id="deneyim" style="background:var(--paper-2);">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="kicker">Deneyim</div>
-      <h2>Kariyer yolculuğum</h2>
+      <div class="kicker" data-tr="Deneyim" data-en="Experience">Deneyim</div>
+      <h2 data-tr="Kariyer yolculuğum" data-en="My career journey">Kariyer yolculuğum</h2>
     </div>
     <div class="exp-list reveal">
       <div class="exp-row">
-        <div class="period mono">2026 — Şimdi</div>
+        <div class="period mono">2026 — <span data-tr="Şimdi" data-en="Present">Şimdi</span></div>
         <div><h3>Graphic Designer Specialist</h3><div class="co">Xenon Smart</div>
-        <p>Marka kimliğine uygun paketleme ve ürün etiket sistemleri, sosyal medya ve perakende kampanyaları için dijital pazarlama görselleri, üretim ortakları için baskıya hazır dosya yönetimi.</p></div>
+        <p data-tr="Marka kimliğine uygun paketleme ve ürün etiket sistemleri, sosyal medya ve perakende kampanyaları için dijital pazarlama görselleri, üretim ortakları için baskıya hazır dosya yönetimi." data-en="Designed packaging and product label systems aligned with brand identity, created digital marketing assets for social media and retail campaigns, and managed print-ready production files for manufacturing partners.">Marka kimliğine uygun paketleme ve ürün etiket sistemleri, sosyal medya ve perakende kampanyaları için dijital pazarlama görselleri, üretim ortakları için baskıya hazır dosya yönetimi.</p></div>
       </div>
       <div class="exp-row">
         <div class="period mono">2025 — 2026</div>
-        <div><h3>Graphic Designer — Paketleme &amp; Dijital Pazarlama</h3><div class="co">Kiwi – Aprilla</div>
-        <p>E-ticaret ve marketplace'te satılan teknolojik ev aletleri için paketleme ve etiket çözümleri, sosyal medya kampanya görselleri ve kullanıcı verisi analizine dayalı etkileşimli pazarlama içerikleri.</p></div>
+        <div><h3 data-tr="Graphic Designer — Paketleme &amp; Dijital Pazarlama" data-en="Graphic Designer — Packaging &amp; Digital Marketing">Graphic Designer — Paketleme &amp; Dijital Pazarlama</h3><div class="co">Kiwi – Aprilla</div>
+        <p data-tr="E-ticaret ve marketplace'te satılan teknolojik ev aletleri için paketleme ve etiket çözümleri, sosyal medya kampanya görselleri ve kullanıcı verisi analizine dayalı etkileşimli pazarlama içerikleri." data-en="Designed packaging and label solutions for technological home appliances sold on e-commerce and marketplace platforms, produced social media campaign visuals, and created interactive marketing assets informed by user data and analytics.">E-ticaret ve marketplace'te satılan teknolojik ev aletleri için paketleme ve etiket çözümleri, sosyal medya kampanya görselleri ve kullanıcı verisi analizine dayalı etkileşimli pazarlama içerikleri.</p></div>
       </div>
       <div class="exp-row">
         <div class="period mono">2023 — 2024</div>
-        <div><h3>Graphic Designer — Paketleme &amp; Etiket Tasarımı</h3><div class="co">Karnaval Kozmetik / Golden Kozmetik</div>
-        <p>Kişisel bakım ve kozmetik ürünleri için e-ticaret ve marketplace kanallarına yönelik paketleme ve etiket tasarımı.</p></div>
+        <div><h3 data-tr="Graphic Designer — Paketleme &amp; Etiket Tasarımı" data-en="Graphic Designer — Packaging &amp; Label Design">Graphic Designer — Paketleme &amp; Etiket Tasarımı</h3><div class="co">Karnaval Kozmetik / Golden Kozmetik</div>
+        <p data-tr="Kişisel bakım ve kozmetik ürünleri için e-ticaret ve marketplace kanallarına yönelik paketleme ve etiket tasarımı." data-en="Designed packaging and label solutions for personal care and cosmetic products sold on e-commerce and marketplace platforms.">Kişisel bakım ve kozmetik ürünleri için e-ticaret ve marketplace kanallarına yönelik paketleme ve etiket tasarımı.</p></div>
       </div>
       <div class="exp-row">
         <div class="period mono">2023</div>
         <div><h3>Junior Graphic Designer</h3><div class="co">Bi Kutu Güzellik</div>
-        <p>Yeni açılan fiziksel mağazalar için basılı ve dijital görsel varlıkların yönetimi, kampanya kreatifleri.</p></div>
+        <p data-tr="Yeni açılan fiziksel mağazalar için basılı ve dijital görsel varlıkların yönetimi, kampanya kreatifleri." data-en="Managed printed and digital visual assets for newly opened physical retail stores, and created campaign creatives and landing pages for marketing initiatives.">Yeni açılan fiziksel mağazalar için basılı ve dijital görsel varlıkların yönetimi, kampanya kreatifleri.</p></div>
       </div>
       <div class="exp-row">
         <div class="period mono">2021 — 2025</div>
-        <div><h3>Grafik Tasarım — Ön Lisans</h3><div class="co">İstanbul Beykent Üniversitesi</div></div>
+        <div><h3 data-tr="Grafik Tasarım — Ön Lisans" data-en="Graphic Design — Associate Degree">Grafik Tasarım — Ön Lisans</h3><div class="co">İstanbul Beykent Üniversitesi</div></div>
       </div>
     </div>
   </div>
@@ -390,12 +399,12 @@ footer{background:#000; color:rgba(255,255,255,0.55); padding:30px 0; border-top
 
 <section id="iletisim" class="contact-band">
   <div class="wrap reveal">
-    <div class="kicker" style="color:rgba(255,255,255,0.6);">İletişim</div>
-    <h2>Bir proje mi konuşalım?</h2>
-    <p>Paketleme, marka kimliği ya da e-ticaret görselleri için birlikte çalışmak isterseniz benimle iletişime geçin.</p>
+    <div class="kicker" style="color:rgba(255,255,255,0.6);" data-tr="İletişim" data-en="Contact">İletişim</div>
+    <h2 data-tr="Bir proje mi konuşalım?" data-en="Let's talk about a project?">Bir proje mi konuşalım?</h2>
+    <p data-tr="Paketleme, marka kimliği ya da e-ticaret görselleri için birlikte çalışmak isterseniz benimle iletişime geçin." data-en="If you'd like to work together on packaging, brand identity or e-commerce visuals, get in touch.">Paketleme, marka kimliği ya da e-ticaret görselleri için birlikte çalışmak isterseniz benimle iletişime geçin.</p>
     <div class="contact-actions">
-      <a href="mailto:armaganalimlerr@gmail.com" class="btn solid">E-posta Gönder</a>
-      <a href="https://www.behance.net/armaganalimler" target="_blank" rel="noopener" class="btn ghost">Behance'i Görüntüle</a>
+      <a href="mailto:armaganalimlerr@gmail.com" class="btn solid" data-tr="E-posta Gönder" data-en="Send an Email">E-posta Gönder</a>
+      <a href="https://www.behance.net/armaganalimler" target="_blank" rel="noopener" class="btn ghost" data-tr="Behance'i Görüntüle" data-en="View Behance">Behance'i Görüntüle</a>
     </div>
   </div>
 </section>
@@ -429,6 +438,25 @@ const io = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
 }, { threshold: 0.08 });
 revealEls.forEach(el => io.observe(el));
+
+/* ===== Dil değiştirme (TR / EN) ===== */
+(function initLang(){
+  function applyLang(lang){
+    document.querySelectorAll('[data-tr]').forEach(el => {
+      const val = el.getAttribute('data-' + lang);
+      if (val !== null) el.textContent = val;
+    });
+    document.documentElement.lang = lang;
+    try { localStorage.setItem('site-lang', lang); } catch(e){}
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+  }
+  let saved = 'tr';
+  try { saved = localStorage.getItem('site-lang') || 'tr'; } catch(e){}
+  applyLang(saved);
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    b.addEventListener('click', () => applyLang(b.dataset.lang));
+  });
+})();
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
