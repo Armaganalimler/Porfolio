@@ -134,12 +134,10 @@ footer{background:var(--ink); color:rgba(255,255,255,0.55); padding:30px 0; bord
 .proj-links{display:flex; gap:20px; margin-top:30px; flex-wrap:wrap;}
 .proj-links a{font-size:12.5px; text-transform:uppercase; letter-spacing:0.04em; border-bottom:1px solid var(--ink); padding-bottom:3px;}
 
-.proj-flow{padding:70px 0;}
-.pf-img{margin-bottom:22px;}
-.pf-img img{width:100%; border-radius:2px;}
-.pf-row{display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-bottom:22px;}
-@media (max-width:760px){ .pf-row{grid-template-columns:1fr;} }
-.pf-row img{width:100%; height:100%; object-fit:cover; border-radius:2px;}
+.proj-flow{padding:0 0 70px;}
+.proj-flow .wrap{max-width:none; padding:0;}
+.pf-img{margin:0; line-height:0; display:block;}
+.pf-img img{width:100%; display:block;}
 
 .video-frame{position:relative; width:100%; aspect-ratio:16/9; border-radius:2px; overflow:hidden; background:#000; margin-bottom:22px;}
 .video-frame iframe{position:absolute; inset:0; width:100%; height:100%; border:0;}
@@ -187,10 +185,12 @@ footer{background:var(--ink); color:rgba(255,255,255,0.55); padding:30px 0; bord
 <div class="pf-img reveal"><img src="assets/work/xenon/xenon-10-description.webp" alt="Xenon Smart" loading="lazy"></div>
 <div class="pf-img reveal"><img src="assets/work/xenon/xenon-6-airpro-cover.webp" alt="Xenon Smart" loading="lazy"></div>
 <div class="pf-img reveal"><img src="assets/work/xenon/xenon-4-iconset-pro.webp" alt="Xenon Smart" loading="lazy"></div>
-<div class="pf-row reveal"><img src="assets/work/xenon/xenon-11-smart-closeup.webp" alt="Xenon Smart" loading="lazy"><img src="assets/work/xenon/xenon-2-airpro.webp" alt="Xenon Smart" loading="lazy"></div>
+<div class="pf-img reveal"><img src="assets/work/xenon/xenon-11-smart-closeup.webp" alt="Xenon Smart" loading="lazy"></div>
+<div class="pf-img reveal"><img src="assets/work/xenon/xenon-2-airpro.webp" alt="Xenon Smart" loading="lazy"></div>
 <div class="pf-img reveal"><img src="assets/work/xenon/xenon-7-airluxe-cover.webp" alt="Xenon Smart" loading="lazy"></div>
 <div class="pf-img reveal"><img src="assets/work/xenon/xenon-3-iconset-luxe.webp" alt="Xenon Smart" loading="lazy"></div>
-<div class="pf-row reveal"><img src="assets/work/xenon/xenon-9-airluxe-lamp.webp" alt="Xenon Smart" loading="lazy"><img src="assets/work/xenon/xenon-5-lifestyle.webp" alt="Xenon Smart" loading="lazy"></div>
+<div class="pf-img reveal"><img src="assets/work/xenon/xenon-9-airluxe-lamp.webp" alt="Xenon Smart" loading="lazy"></div>
+<div class="pf-img reveal"><img src="assets/work/xenon/xenon-5-lifestyle.webp" alt="Xenon Smart" loading="lazy"></div>
 <div class="pf-img reveal"><img src="assets/work/xenon/xenon-8-smart-cover.webp" alt="Xenon Smart" loading="lazy"></div>
 
   </div>
