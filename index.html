@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Armağan Alimler — Grafik Tasarımcı | Paketleme &amp; Marka Kimliği</title>
+<meta name="description" content="Armağan Alimler — Paketleme, marka kimliği ve e-ticaret tasarımı odaklı grafik tasarımcı. Xenon Smart, Kiwi, Ecrou, OZKO ve daha fazlası için tamamlanmış projeler.">
+<meta property="og:title" content="Armağan Alimler — Grafik Tasarımcı">
+<meta property="og:description" content="Paketleme, marka kimliği ve e-ticaret tasarımı odaklı grafik tasarımcı portföyü.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Armağan Alimler",
+  "jobTitle": "Graphic Designer — Packaging & Brand Identity",
+  "email": "armaganalimlerr@gmail.com",
+  "telephone": "+90 553 349 84 68",
+  "address": {"@type": "PostalAddress", "addressLocality": "Istanbul", "addressCountry": "TR"},
+  "sameAs": ["https://www.behance.net/armaganalimler"]
+}
+</script>
+<style>
+  :root{
+    --dark:#0B0B0D;
+    --dark-2:#141417;
+    --light:#F3F1EC;
+    --light-2:#EAE6DC;
+    --ink:#17181B;
+    --white:#F5F5F3;
+    --glow:#E8B65A;
+    --glow-deep:#B9873C;
+    --line-dark:rgba(245,245,243,0.12);
+    --line-light:rgba(23,24,27,0.12);
+    --gray-dark:rgba(245,245,243,0.58);
+    --gray-light:rgba(23,24,27,0.58);
+    --maxw:1220px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--dark); color:var(--white);
+    font-family:'Inter',sans-serif; font-size:16px; line-height:1.65;
+    overflow-x:hidden; -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
+  h1,h2,h3{font-family:'Instrument Sans',sans-serif; font-weight:700; line-height:1.08; letter-spacing:-0.01em;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  a{color:inherit; text-decoration:none;}
+  img{display:block; max-width:100%;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 36px;}
+  @media (max-width:640px){ .wrap{padding:0 20px;} }
+
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; text-transform:uppercase;
+    letter-spacing:0.14em; color:var(--glow); margin-bottom:16px; font-weight:600;
+  }
+
+  /* ===== accessibility ===== */
+  .skip-link{
+    position:absolute; left:16px; top:-60px; background:var(--white); color:var(--ink);
+    padding:10px 16px; z-index:1000; font-size:13px; transition:top .2s ease; border-radius:6px;
+  }
+  .skip-link:focus{top:16px;}
+  a:focus-visible, button:focus-visible{ outline:2px solid var(--glow); outline-offset:3px; }
+
+  /* ===== light-and-shadow cursor glow (signature element) ===== */
+  .glow-layer{
+    position:fixed; inset:0; pointer-events:none; z-index:1;
+    background:radial-gradient(420px circle at var(--mx,50%) var(--my,20%), rgba(232,182,90,0.12), transparent 70%);
+    opacity:0; transition:opacity .4s ease;
+  }
+  .on-dark .glow-layer{opacity:1;}
+
+  /* ===== NAV ===== */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background:rgba(11,11,13,0.72); backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line-dark);
+    padding:20px 0;
+  }
+  nav.wrap{display:flex; align-items:center; justify-content:space-between;}
+  .brand{font-family:'Instrument Sans',sans-serif; font-weight:700; font-size:17px; color:var(--white);}
+  .navlinks{display:flex; gap:32px; align-items:center;}
+  .navlinks a:not(.nav-cta){font-size:13.5px; color:var(--gray-dark); transition:color .2s ease;}
+  .navlinks a:not(.nav-cta):hover{color:var(--white);}
+  .nav-cta{
+    border:1px solid var(--line-dark); padding:8px 18px; border-radius:99px; font-size:12.5px;
+    color:var(--white); transition:border-color .2s ease, background .2s ease;
+  }
+  .nav-cta:hover{border-color:var(--glow); background:rgba(232,182,90,0.08);}
+  .menu-btn{display:none; background:none; border:none; cursor:pointer; padding:6px;}
+  .menu-btn span{display:block; width:20px; height:2px; background:var(--white); margin:5px 0;}
+  @media (max-width:760px){
+    .navlinks{
+      position:fixed; top:0; right:0; height:100vh; width:76%; max-width:300px;
+      background:var(--dark-2); flex-direction:column; justify-content:center; align-items:flex-start;
+      padding:40px; gap:26px; transform:translateX(100%); transition:transform .35s ease;
+      border-left:1px solid var(--line-dark);
+    }
+    .navlinks.open{transform:translateX(0);}
+    .navlinks a{font-size:16px;}
+    .menu-btn{display:block;}
+  }
+
+  /* ===== HERO ===== */
+  .hero{position:relative; padding:180px 0 120px; overflow:hidden;}
+  .hero-inner{position:relative; z-index:2;}
+  .hero h1{font-size:clamp(38px,6vw,76px); max-width:14ch;}
+  .hero h1 .accent{color:var(--glow);}
+  .hero-role{font-size:17px; color:var(--gray-dark); margin-top:22px; max-width:52ch;}
+  .hero-meta{display:flex; gap:28px; flex-wrap:wrap; margin-top:38px;}
+  .hero-meta a{
+    display:inline-flex; align-items:center; gap:8px; font-size:13px; color:var(--white);
+    border-bottom:1px solid var(--line-dark); padding-bottom:6px; transition:border-color .2s ease, color .2s ease;
+  }
+  .hero-meta a:hover{border-color:var(--glow); color:var(--glow);}
+
+  section{padding:110px 0;}
+  @media (max-width:640px){ section{padding:64px 0;} }
+  .light-sec{background:var(--light); color:var(--ink);}
+  .light-sec .eyebrow{color:var(--glow-deep);}
+  .light-sec .gray{color:var(--gray-light);}
+  .dark-sec{background:var(--dark); color:var(--white);}
+  .dark-sec .gray{color:var(--gray-dark);}
+  .alt-sec{background:var(--dark-2); color:var(--white);}
+  .alt-sec .gray{color:var(--gray-dark);}
+
+  .section-head{max-width:640px; margin-bottom:52px;}
+  .section-head h2{font-size:clamp(28px,3.6vw,42px);}
+  .section-head p{margin-top:14px; font-size:15.5px;}
+
+  /* ===== WORK CARD ===== */
+  .work-block{display:grid; grid-template-columns:0.85fr 1.15fr; gap:64px; align-items:center;}
+  .work-block.reverse{grid-template-columns:1.15fr 0.85fr;}
+  .work-block.reverse .work-text{order:2;}
+  .work-block.reverse .work-media{order:1;}
+  @media (max-width:900px){
+    .work-block, .work-block.reverse{grid-template-columns:1fr; gap:32px;}
+    .work-block.reverse .work-text, .work-block.reverse .work-media{order:initial;}
+  }
+  .work-text h3{font-size:clamp(24px,3vw,34px);}
+  .work-text .tag{font-family:'IBM Plex Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; opacity:0.6; margin-top:6px; display:block;}
+  .work-text p{margin-top:18px; font-size:15px; max-width:46ch;}
+  .work-links{display:flex; gap:16px; margin-top:24px; flex-wrap:wrap;}
+  .work-links a{font-size:12.5px; text-transform:uppercase; letter-spacing:0.05em; border-bottom:1px solid currentColor; padding-bottom:3px;}
+
+  .work-media{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  .work-media.single{grid-template-columns:1fr;}
+  .work-media img{width:100%; height:100%; object-fit:cover; border-radius:10px;}
+  .wcard{position:relative; overflow:hidden; border-radius:10px; aspect-ratio:4/3;}
+  .wcard.tall{aspect-ratio:3/4;}
+  .wcard img{filter:brightness(0.7) saturate(0.9); transition:filter .5s ease, transform .5s ease;}
+  .wcard:hover img{filter:brightness(1) saturate(1.05); transform:scale(1.03);}
+
+  /* ===== VIDEO EMBED ===== */
+  .video-frame{position:relative; width:100%; aspect-ratio:16/9; border-radius:10px; overflow:hidden; background:#000;}
+  .video-frame iframe{position:absolute; inset:0; width:100%; height:100%; border:0;}
+
+  /* ===== ABOUT / SKILLS ===== */
+  .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:60px;}
+  @media (max-width:860px){ .about-grid{grid-template-columns:1fr; gap:34px;} }
+  .about-grid p{font-size:15.5px; max-width:52ch;}
+  .skill-tags{display:flex; flex-wrap:wrap; gap:10px; margin-top:20px;}
+  .skill-tag{
+    font-family:'IBM Plex Mono',monospace; font-size:12px; padding:8px 14px; border-radius:99px;
+    border:1px solid var(--line-light);
+  }
+
+  /* ===== EXPERIENCE ===== */
+  .exp-list{border-top:1px solid var(--line-dark);}
+  .exp-row{
+    display:grid; grid-template-columns:150px 1fr; gap:30px;
+    padding:28px 0; border-bottom:1px solid var(--line-dark);
+  }
+  @media (max-width:640px){ .exp-row{grid-template-columns:1fr; gap:6px;} }
+  .exp-row .period{font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--glow); padding-top:2px;}
+  .exp-row h3{font-size:18px; font-weight:700;}
+  .exp-row .co{font-size:13.5px; color:var(--gray-dark); margin-top:3px;}
+  .exp-row p{font-size:14px; color:var(--gray-dark); margin-top:10px; max-width:60ch;}
+
+  /* ===== CONTACT ===== */
+  .contact-inner{text-align:center; max-width:640px; margin:0 auto;}
+  .contact-inner h2{font-size:clamp(30px,4.6vw,54px);}
+  .contact-inner p{margin-top:18px; font-size:16px;}
+  .contact-actions{display:flex; gap:16px; justify-content:center; margin-top:40px; flex-wrap:wrap;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; padding:15px 30px; border-radius:99px;
+    font-size:13.5px; font-weight:600; transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .btn.solid{background:var(--glow); color:var(--ink);}
+  .btn.solid:hover{transform:translateY(-2px); box-shadow:0 12px 26px rgba(232,182,90,0.35);}
+  .btn.ghost{border:1px solid var(--line-light); color:var(--ink);}
+  .btn.ghost:hover{border-color:var(--ink);}
+
+  /* ===== FOOTER ===== */
+  footer{background:var(--dark); padding:36px 0; border-top:1px solid var(--line-dark);}
+  .footer-row{display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:12.5px; color:var(--gray-dark);}
+  .footer-row a:hover{color:var(--glow);}
+
+  .reveal{opacity:0; transform:translateY(20px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+</style>
+</head>
+<body class="on-dark">
+
+<a href="#mainContent" class="skip-link">İçeriğe atla</a>
+<div class="glow-layer" id="glowLayer"></div>
+
+<header id="siteHeader">
+  <nav class="wrap" aria-label="Ana menü">
+    <a href="#" class="brand">Armağan Alimler</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navLinks" type="button"><span></span><span></span><span></span></button>
+    <div class="navlinks" id="navLinks">
+      <a href="#isler">İşler</a>
+      <a href="#hakkimda">Hakkımda</a>
+      <a href="#deneyim">Deneyim</a>
+      <a href="#iletisim" class="nav-cta">İletişim</a>
+    </div>
+  </nav>
+</header>
+
+<main id="mainContent">
+
+<section class="hero dark-sec">
+  <div class="wrap hero-inner">
+    <div class="eyebrow">Grafik Tasarımcı — İstanbul</div>
+    <h1>Paketleme ve marka kimliğinde <span class="accent">iz bırakan</span> tasarımlar.</h1>
+    <p class="hero-role">4+ yıldır tüketici ürünleri ve teknoloji markaları için paketleme, marka kimliği ve e-ticaret görselleri tasarlıyorum — Xenon Smart, Kiwi &amp; Aprilla ve daha fazlası için.</p>
+    <div class="hero-meta">
+      <a href="https://www.behance.net/armaganalimler" target="_blank" rel="noopener">Behance ↗</a>
+      <a href="mailto:armaganalimlerr@gmail.com">armaganalimlerr@gmail.com</a>
+      <a href="tel:+905533498468">+90 553 349 84 68</a>
+    </div>
+  </div>
+</section>
+
+<section id="isler" class="light-sec">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Öne Çıkan İşler</div>
+      <h2>Seçilmiş projeler</h2>
+      <p class="gray">Paketleme sistemlerinden marka kimliğine, sosyal medya görsellerinden e-ticaret içeriklerine.</p>
+    </div>
+
+    <div class="work-block reveal" style="margin-bottom:100px;">
+      <div class="work-text">
+        <span class="tag">01 — Paketleme Tasarımı</span>
+        <h3>Xenon Smart</h3>
+        <p>Akıllı ev aletleri markası Xenon Smart'ın Air Pro ve Air Luxe akıllı ayaklı vantilatör modelleri için perakende paketleme sistemi. Air Pro temiz ve teknik bir dil konuşurken, Air Luxe daha sıcak ve atmosferik bir sunuma kayıyor — aynı ızgara, farklı ruh hali.</p>
+        <div class="work-links"><a href="https://www.behance.net/gallery/251859401/Xenon-Smart-Smart-Stand-Fan-Packaging" target="_blank" rel="noopener">Behance'te İncele</a></div>
+      </div>
+      <div class="work-media">
+        <div class="wcard tall" style="grid-row:1/3;"><img src="assets/work/xenon/xenon-1-cover.webp" alt="Xenon Smart, akıllı ayaklı vantilatör paketleme tasarımı" loading="lazy"></div>
+        <div class="wcard"><img src="assets/work/xenon/xenon-9-airluxe-lamp.webp" alt="Xenon Air Luxe, sıcak ışıklı yaşam alanı fotoğrafı" loading="lazy"></div>
+        <div class="wcard"><img src="assets/work/xenon/xenon-6-airpro-cover.webp" alt="Xenon Air Pro paketleme, temiz stüdyo çekimi" loading="lazy"></div>
+      </div>
+    </div>
+
+    <div class="work-block reverse reveal" style="margin-bottom:100px;">
+      <div class="work-text">
+        <span class="tag">02 — Paketleme &amp; Sosyal Medya</span>
+        <h3>Kiwi &amp; Aprilla</h3>
+        <p>Ev aletleri markası Kiwi için kablosuz dik süpürge paketleme ve etiket tasarımı, ayrıca markanın Instagram hesabı için ürün odaklı sosyal medya içerikleri — 164B+ takipçili aktif bir topluluğa hizmet ediyor.</p>
+        <div class="work-links"><a href="https://www.behance.net/gallery/230625127/Kiwi-Packing-and-Label-Design" target="_blank" rel="noopener">Paketleme — Behance</a><a href="https://www.behance.net/gallery/224232927/Kiwi-Social-Media" target="_blank" rel="noopener">Sosyal Medya — Behance</a></div>
+      </div>
+      <div class="work-media">
+        <div class="wcard"><img src="assets/work/kiwi/kiwi-9-vacuum-cover.webp" alt="Kiwi kablosuz dik süpürge paketleme tasarımı" loading="lazy"></div>
+        <div class="wcard"><img src="assets/work/kiwi/kiwi-16-social-cover.webp" alt="Kiwi & Aprilla Instagram sosyal medya kimliği" loading="lazy"></div>
+        <div class="wcard tall" style="grid-row:1/3; grid-column:2;"><img src="assets/work/kiwi/kiwi-3-pets.webp" alt="Kiwi Pets ve ürün sosyal medya içerikleri" loading="lazy"></div>
+      </div>
+    </div>
+
+    <div class="work-block reveal" style="margin-bottom:100px;">
+      <div class="work-text">
+        <span class="tag">03 — Marka Kimliği &amp; Paketleme</span>
+        <h3>Ecrou</h3>
+        <p>"The Brand of Feel-Good Surprises" sloganıyla kişisel bakım ürünleri markası Ecrou için logo, etiket ve ambalaj tasarımı. Lavanta uyku spreyinden ayak bakım tuzuna, tutarlı bir lavanta-pembe renk dünyası içinde farklı ürün hatları.</p>
+        <div class="work-links"><a href="https://www.behance.net/gallery/224849619/Ecrou-Packing-and-Label-Design" target="_blank" rel="noopener">Behance'te İncele</a></div>
+      </div>
+      <div class="work-media">
+        <div class="wcard tall" style="grid-row:1/3;"><img src="assets/work/ecrou/ecrou-2-lavender-spray.webp" alt="Ecrou Lavender Sleeping Spray ambalaj tasarımı" loading="lazy"></div>
+        <div class="wcard"><img src="assets/work/ecrou/ecrou-1-brand.webp" alt="Ecrou marka renk paleti ve logo" loading="lazy"></div>
+        <div class="wcard"><img src="assets/work/ecrou/ecrou-3-jar-box.webp" alt="Ecrou ayak bakım tuzu kavanoz ve kutu tasarımı" loading="lazy"></div>
+      </div>
+    </div>
+
+    <div class="work-block reverse reveal" style="margin-bottom:100px;">
+      <div class="work-text">
+        <span class="tag">04 — Logo &amp; Marka Kimliği</span>
+        <h3>Berru Toğaç Hukuk Bürosu</h3>
+        <p>Bir hukuk bürosu için adalet terazisi ve "BT" monogramını birleştiren zarif, güven veren bir logo sistemi. Siyah-beyaz kontrastlı, farklı kullanım biçimlerine uyarlanabilir bir kimlik.</p>
+        <div class="work-links"><a href="https://www.behance.net/gallery/233625075/Logo-Brand-Design-for-Law-Firm" target="_blank" rel="noopener">Behance'te İncele</a></div>
+      </div>
+      <div class="work-media">
+        <div class="wcard"><img src="assets/work/hukuk/hukuk-1-logo.webp" alt="Berru Toğaç Hukuk Bürosu logo tasarımı" loading="lazy"></div>
+        <div class="wcard"><img src="assets/work/hukuk/hukuk-2-logo-variations.webp" alt="Hukuk bürosu logo kullanım varyasyonları" loading="lazy"></div>
+      </div>
+    </div>
+
+    <div class="work-block reveal" style="margin-bottom:100px;">
+      <div class="work-text">
+        <span class="tag">05 — Marka Kimliği &amp; Katalog</span>
+        <h3>OZKO by Özge Köse</h3>
+        <p>Renkli, kolaj temalı bir aksesuar markası için kimlik ve katalog tasarımı. Bucket şapkadan bel çantasına, canlı desenlerin taşındığı tutarlı bir görsel dil ve dergi formatında bir ürün kataloğu.</p>
+        <div class="work-links"><a href="https://www.behance.net/gallery/227374275/OZKO-Branding-Brochure" target="_blank" rel="noopener">Behance'te İncele</a></div>
+      </div>
+      <div class="work-media">
+        <div class="wcard tall"><img src="assets/work/ozko/ozko-cover.jpg" alt="OZKO by Özge Köse marka kimliği ve bucket şapka" loading="lazy"></div>
+        <div class="wcard tall"><img src="assets/work/ozko/ozko-detail.jpg" alt="OZKO çanta ve katalog maketi" loading="lazy"></div>
+      </div>
+    </div>
+
+    <div class="work-block reverse reveal">
+      <div class="work-text">
+        <span class="tag">06 — Logo, Kimlik &amp; Video</span>
+        <h3>Ahmet Ruşan / Tattoo Artist</h3>
+        <p>Bir dövme sanatçısı için "A" ve "R" harflerini dövme iğnesiyle birleştiren özgün bir logo tasarımı. El çizimi eskizlerden dijital son hale, kartvizit tasarımına ve tanıtım videosuna uzanan bütünleşik bir marka kimliği süreci.</p>
+        <div class="work-links"><a href="https://www.behance.net/gallery/240824469/Ahmmet-Rusan-Tattoo-Artist" target="_blank" rel="noopener">Behance'te İncele</a></div>
+      </div>
+      <div class="work-media">
+        <div class="wcard"><img src="assets/work/ahmetrusan/ar-1-logo-process.webp" alt="Ahmet Ruşan logosu, eskiz ve final tasarım süreci" loading="lazy"></div>
+        <div class="wcard"><img src="assets/work/ahmetrusan/ar-4-bcard.webp" alt="Ahmet Ruşan kartvizit tasarımı" loading="lazy"></div>
+      </div>
+      <div class="reveal" style="grid-column:1/-1; margin-top:24px;">
+        <div class="video-frame">
+          <iframe src="https://player.vimeo.com/video/1148335545?background=1&amp;autoplay=1&amp;loop=1&amp;muted=1" title="Ahmet Ruşan Tattoo Artist tanıtım videosu" frameborder="0" allow="autoplay" sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="hakkimda" class="dark-sec">
+  <div class="wrap">
+    <div class="about-grid reveal">
+      <div>
+        <div class="eyebrow">Hakkımda</div>
+        <h2 style="font-size:clamp(26px,3.2vw,36px);">Marka ve ürünün kesiştiği yerde tasarlıyorum.</h2>
+        <p class="gray" style="margin-top:20px;">4+ yıldır tüketici ürünleri ve teknoloji markaları için paketleme, marka kimliği ve e-ticaret tasarımı üretiyorum. Marketplace görsellerinden sosyal medya kampanyalarına, farklı çevrimiçi ve fiziksel perakende kanallarında tutarlı bir marka deneyimi kurmaya odaklanıyorum.</p>
+      </div>
+      <div>
+        <div class="eyebrow">Yetkinlikler</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Paketleme &amp; Etiket Tasarımı</span>
+          <span class="skill-tag">Marka Kimliği</span>
+          <span class="skill-tag">E-ticaret &amp; Marketplace Görselleri</span>
+          <span class="skill-tag">Sosyal Medya Tasarımı</span>
+          <span class="skill-tag">Logo Tasarımı</span>
+          <span class="skill-tag">Adobe Photoshop</span>
+          <span class="skill-tag">Adobe Illustrator</span>
+          <span class="skill-tag">Adobe InDesign</span>
+          <span class="skill-tag">Adobe After Effects</span>
+          <span class="skill-tag">Figma</span>
+          <span class="skill-tag">AI Destekli Tasarım</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="deneyim" class="light-sec">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Deneyim</div>
+      <h2>Kariyer yolculuğum</h2>
+    </div>
+    <div class="exp-list reveal">
+      <div class="exp-row">
+        <div class="period mono">2026 — Şimdi</div>
+        <div>
+          <h3>Graphic Designer Specialist</h3>
+          <div class="co">Xenon Smart</div>
+          <p>Marka kimliğine uygun paketleme ve ürün etiket sistemleri, sosyal medya ve perakende kampanyaları için dijital pazarlama görselleri, üretim ortakları için baskıya hazır dosya yönetimi.</p>
+        </div>
+      </div>
+      <div class="exp-row">
+        <div class="period mono">2025 — 2026</div>
+        <div>
+          <h3>Graphic Designer — Paketleme &amp; Dijital Pazarlama</h3>
+          <div class="co">Kiwi – Aprilla</div>
+          <p>E-ticaret ve marketplace'te satılan teknolojik ev aletleri için paketleme ve etiket çözümleri, sosyal medya kampanya görselleri ve kullanıcı verisi analizine dayalı etkileşimli pazarlama içerikleri.</p>
+        </div>
+      </div>
+      <div class="exp-row">
+        <div class="period mono">2023 — 2024</div>
+        <div>
+          <h3>Graphic Designer — Paketleme &amp; Etiket Tasarımı</h3>
+          <div class="co">Karnaval Kozmetik / Golden Kozmetik</div>
+          <p>Kişisel bakım ve kozmetik ürünleri için e-ticaret ve marketplace kanallarına yönelik paketleme ve etiket tasarımı.</p>
+        </div>
+      </div>
+      <div class="exp-row">
+        <div class="period mono">2023</div>
+        <div>
+          <h3>Junior Graphic Designer</h3>
+          <div class="co">Bi Kutu Güzellik</div>
+          <p>Yeni açılan fiziksel mağazalar için basılı ve dijital görsel varlıkların yönetimi, kampanya kreatifleri.</p>
+        </div>
+      </div>
+      <div class="exp-row">
+        <div class="period mono">2021 — 2025</div>
+        <div>
+          <h3>Grafik Tasarım — Ön Lisans</h3>
+          <div class="co">İstanbul Beykent Üniversitesi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="iletisim" class="dark-sec">
+  <div class="wrap contact-inner reveal">
+    <div class="eyebrow" style="justify-content:center; display:flex;">İletişim</div>
+    <h2>Bir proje mi konuşalım?</h2>
+    <p class="gray">Paketleme, marka kimliği ya da e-ticaret görselleri için birlikte çalışmak isterseniz benimle iletişime geçin.</p>
+    <div class="contact-actions">
+      <a href="mailto:armaganalimlerr@gmail.com" class="btn solid">E-posta Gönder</a>
+      <a href="https://www.behance.net/armaganalimler" target="_blank" rel="noopener" class="btn ghost" style="border-color:var(--line-dark); color:var(--white);">Behance'i Görüntüle</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <span>© 2026 Armağan Alimler. Tüm hakları saklıdır.</span>
+    <span>
+      <a href="mailto:armaganalimlerr@gmail.com">armaganalimlerr@gmail.com</a> ·
+      <a href="tel:+905533498468">+90 553 349 84 68</a> ·
+      <a href="https://www.behance.net/armaganalimler" target="_blank" rel="noopener">Behance</a>
+    </span>
+  </div>
+</footer>
+
+<script>
+  // mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+  function closeMenu(){ navLinks.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); }
+  function onEscClose(e){ if (e.key === 'Escape'){ closeMenu(); menuBtn.focus(); } }
+  menuBtn.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(open));
+    if (open){ navLinks.querySelector('a')?.focus(); document.addEventListener('keydown', onEscClose); }
+    else { document.removeEventListener('keydown', onEscClose); }
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+  // light-and-shadow cursor glow
+  const glowLayer = document.getElementById('glowLayer');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReducedMotion){
+    window.addEventListener('mousemove', (e) => {
+      glowLayer.style.setProperty('--mx', e.clientX + 'px');
+      glowLayer.style.setProperty('--my', e.clientY + 'px');
+    }, { passive: true });
+  }
+
+  // reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
