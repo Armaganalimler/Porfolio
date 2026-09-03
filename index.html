@@ -98,6 +98,11 @@ section{padding:100px 0;}
 @media (max-width:860px){ .about-grid{grid-template-columns:1fr; gap:32px;} }
 .about-grid p{font-size:15.5px; color:var(--gray); max-width:52ch;}
 .skill-tags{display:flex; flex-wrap:wrap; gap:9px; margin-top:20px;}
+.brand-list{margin-top:26px; padding-top:22px; border-top:1px solid var(--line);}
+.brand-list .lbl{font-family:'IBM Plex Mono',monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:0.1em; color:var(--gray); margin-bottom:10px;}
+.brand-list .names{font-size:14.5px; line-height:1.9;}
+.brand-list .names span{color:var(--ink); font-weight:600;}
+.brand-list .names .sep{color:var(--line); font-weight:400; margin:0 8px;}
 .skill-tag{font-family:'IBM Plex Mono',monospace; font-size:11.5px; padding:8px 14px; border-radius:99px; border:1px solid var(--line);}
 
 /* ===== EXPERIENCE ===== */
@@ -189,23 +194,6 @@ footer{background:#000; color:rgba(255,255,255,0.55); padding:30px 0; border-top
 .expand-hint{position:absolute; bottom:26px; left:50%; transform:translateX(-50%); font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--gray); opacity:1; transition:opacity .3s ease;}
 @media (max-width:760px){ .expand-frame{width:78vw; height:46vh;} }
 
-/* ===== OptionWheel (proje kaydırıcı) ===== */
-.wheel-nav{
-  position:fixed; right:22px; top:50%; transform:translateY(-50%); z-index:60;
-  display:flex; flex-direction:column; align-items:flex-end; gap:2px; max-height:60vh; overflow:hidden;
-  -webkit-mask-image:linear-gradient(to bottom, transparent, #000 25%, #000 75%, transparent);
-  mask-image:linear-gradient(to bottom, transparent, #000 25%, #000 75%, transparent);
-}
-.wheel-track{display:flex; flex-direction:column; align-items:flex-end; gap:2px; cursor:grab; touch-action:none;}
-.wheel-track:active{cursor:grabbing;}
-.wheel-item{
-  font-family:'IBM Plex Mono',monospace; font-size:12px; padding:7px 0; color:var(--gray); white-space:nowrap;
-  transition:color .25s ease, transform .25s ease, opacity .25s ease, filter .25s ease;
-  transform-origin:right center;
-}
-.wheel-item.active{color:var(--ink); font-weight:600;}
-@media (max-width:1000px){ .wheel-nav{display:none;} }
-
 .reveal2{opacity:0; transition:opacity .5s ease;}
 .reveal2.in{opacity:1;}
 </style>
@@ -219,7 +207,7 @@ footer{background:#000; color:rgba(255,255,255,0.55); padding:30px 0; border-top
     <a href="index.html" class="brand">Armağan Alimler</a>
     <button class="menu-btn" id="menuBtn" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navLinks" type="button"><span></span><span></span><span></span></button>
     <div class="navlinks" id="navLinks">
-      <a href="index.html#isler" data-tr="İşler" data-en="Work">İşler</a>
+      <a href="index.html#isler" data-tr="Projeler" data-en="Projects">Projeler</a>
       <a href="index.html#hakkimda" data-tr="Hakkımda" data-en="About">Hakkımda</a>
       <a href="index.html#deneyim" data-tr="Deneyim" data-en="Experience">Deneyim</a>
       <a href="index.html#iletisim" class="nav-cta" data-tr="İletişim" data-en="Contact">İletişim</a>
@@ -237,9 +225,9 @@ footer{background:#000; color:rgba(255,255,255,0.55); padding:30px 0; border-top
 <section class="hero">
   <canvas class="liquid-bg" id="liquidBg" aria-hidden="true"></canvas>
   <div class="wrap reveal hero-inner">
-    <div class="kicker" data-tr="Grafik Tasarımcı — İstanbul" data-en="Graphic Designer — Istanbul">Grafik Tasarımcı — İstanbul</div>
-    <h1 data-tr="Paketleme ve marka kimliğinde iz bırakan tasarımlar." data-en="Design work that leaves a mark in packaging and brand identity.">Paketleme ve marka kimliğinde iz bırakan tasarımlar.</h1>
-    <p class="hero-sub" data-tr="4+ yıldır tüketici ürünleri ve teknoloji markaları için paketleme, marka kimliği ve e-ticaret görselleri tasarlıyorum." data-en="For 4+ years I've been designing packaging, brand identity and e-commerce visuals for consumer and technology brands.">4+ yıldır tüketici ürünleri ve teknoloji markaları için paketleme, marka kimliği ve e-ticaret görselleri tasarlıyorum.</p>
+    <div class="kicker" data-tr="PAKETLEME &amp; MARKA KİMLİĞİ TASARIMCISI" data-en="PACKAGING &amp; BRAND IDENTITY DESIGNER">PAKETLEME &amp; MARKA KİMLİĞİ TASARIMCISI</div>
+    <h1 data-tr="Paketleme ve marka kimliğinde uçtan uca tasarım." data-en="End-to-end design in packaging and brand identity.">Paketleme ve marka kimliğinde uçtan uca tasarım.</h1>
+    <p class="hero-sub" data-tr="Yerel ve uluslararası markalar için 4+ yıldır paketleme, marka kimliği ve e-ticaret tasarımı üretiyorum." data-en="I've been producing packaging, brand identity and e-commerce design for local and international brands for 4+ years.">Yerel ve uluslararası markalar için 4+ yıldır paketleme, marka kimliği ve e-ticaret tasarımı üretiyorum.</p>
     <div class="flap-row" id="flapRow" aria-hidden="true"></div>
     <div class="hero-meta">
       <a href="https://www.behance.net/armaganalimler" target="_blank" rel="noopener">Behance ↗</a>
@@ -258,27 +246,19 @@ footer{background:#000; color:rgba(255,255,255,0.55); padding:30px 0; border-top
 <div class="expand-wrap" id="expandWrap">
   <div class="expand-sticky">
     <div class="expand-frame" id="expandFrame">
-      <img src="assets/work/ozko/ozko-cover.jpg" alt="OZKO by Özge Köse projesinden bir kare">
+      <img src="assets/hero/portfolio-cover.png" alt="Portfolio">
       <div class="expand-scrim"></div>
-      <div class="expand-text" id="expandText">
-        <div class="kicker2" data-tr="Öne Çıkan" data-en="Featured">Öne Çıkan</div>
-        <h2 data-tr="Her piksel, her yerde." data-en="Every pixel, everywhere.">Her piksel, her yerde.</h2>
-      </div>
     </div>
     <div class="expand-hint" id="expandHint" data-tr="Kaydırın" data-en="Scroll">Kaydırın</div>
   </div>
 </div>
 
-<nav class="wheel-nav" aria-label="Proje hızlı gezinme">
-  <div class="wheel-track" id="wheelTrack"></div>
-</nav>
-
 <section id="isler">
   <div class="wrap">
     <div class="section-head reveal">
       <div class="kicker" data-tr="Seçilmiş Projeler" data-en="Selected Projects">Seçilmiş Projeler</div>
-      <h2 data-tr="İşler" data-en="Work">İşler</h2>
-      <p data-tr="Her proje kendi sayfasında, Behance'teki akışına sadık kalarak." data-en="Each project has its own page, staying true to its flow on Behance.">Her proje kendi sayfasında, Behance'teki akışına sadık kalarak.</p>
+      <h2 data-tr="Projeler" data-en="Projects">Projeler</h2>
+      <p data-tr="Fikirden üretime, uçtan uca tamamlanmış projeler." data-en="From concept to production, end-to-end completed projects.">Fikirden üretime, uçtan uca tamamlanmış projeler.</p>
     </div>
   </div>
   <div class="work-grid">
@@ -340,7 +320,11 @@ footer{background:#000; color:rgba(255,255,255,0.55); padding:30px 0; border-top
       <div>
         <div class="kicker mono" style="font-size:11.5px; text-transform:uppercase; letter-spacing:0.14em; color:var(--gray); margin-bottom:14px;" data-tr="Hakkımda" data-en="About">Hakkımda</div>
         <h2 style="font-size:clamp(26px,3.2vw,36px);" data-tr="Marka ve ürünün kesiştiği yerde tasarlıyorum." data-en="I design at the intersection of brand and product.">Marka ve ürünün kesiştiği yerde tasarlıyorum.</h2>
-        <p style="margin-top:20px;" data-tr="4+ yıldır tüketici ürünleri ve teknoloji markaları için paketleme, marka kimliği ve e-ticaret tasarımı üretiyorum. Marketplace görsellerinden sosyal medya kampanyalarına, farklı çevrimiçi ve fiziksel perakende kanallarında tutarlı bir marka deneyimi kurmaya odaklanıyorum." data-en="I have 4+ years of experience in packaging, branding, and e-commerce design for consumer products and technology brands. From marketplace visuals to social media campaigns, I focus on delivering a consistent brand experience across online and offline retail channels.">4+ yıldır tüketici ürünleri ve teknoloji markaları için paketleme, marka kimliği ve e-ticaret tasarımı üretiyorum. Marketplace görsellerinden sosyal medya kampanyalarına, farklı çevrimiçi ve fiziksel perakende kanallarında tutarlı bir marka deneyimi kurmaya odaklanıyorum.</p>
+        <p style="margin-top:20px;" data-tr="4+ yıldır tüketici ürünleri ve teknoloji markaları için paketleme, marka kimliği ve e-ticaret tasarımı üretiyorum. Marketplace görselinden baskıya hazır üretim dosyasına kadar sürecin her adımında yer alıyor, üretim ortaklarıyla doğrudan koordinasyon kuruyorum. Hedefim: çevrimiçi ve fiziksel perakende kanallarında aynı marka dilini konuşan bir deneyim." data-en="I have 4+ years of experience in packaging, branding, and e-commerce design for consumer products and technology brands. I'm involved at every step, from marketplace visuals to print-ready production files, coordinating directly with manufacturing partners. My goal: a consistent brand experience that speaks the same language across online and physical retail channels.">4+ yıldır tüketici ürünleri ve teknoloji markaları için paketleme, marka kimliği ve e-ticaret tasarımı üretiyorum. Marketplace görselinden baskıya hazır üretim dosyasına kadar sürecin her adımında yer alıyor, üretim ortaklarıyla doğrudan koordinasyon kuruyorum. Hedefim: çevrimiçi ve fiziksel perakende kanallarında aynı marka dilini konuşan bir deneyim.</p>
+        <div class="brand-list">
+          <div class="lbl" data-tr="Birlikte Çalıştığım Markalar" data-en="Brands I've Worked With">Birlikte Çalıştığım Markalar</div>
+          <div class="names"><span>Xenon Smart</span><span class="sep">·</span><span>Kiwi &amp; Aprilla</span><span class="sep">·</span><span>Ecrou</span><span class="sep">·</span><span>OZKO</span><span class="sep">·</span><span>Berru Toğaç</span><span class="sep">·</span><span>Ahmet Ruşan</span></div>
+        </div>
       </div>
       <div>
         <div class="kicker mono" style="font-size:11.5px; text-transform:uppercase; letter-spacing:0.14em; color:var(--gray); margin-bottom:14px;" data-tr="Yetkinlikler" data-en="Skills">Yetkinlikler</div>
@@ -606,77 +590,6 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
     if (!ticking){ requestAnimationFrame(() => { update(); ticking = false; }); ticking = true; }
   }, { passive:true });
   update();
-})();
-
-/* ===== OptionWheel: proje hızlı gezinme çarkı ===== */
-(function initWheel(){
-  const nav = document.querySelector('.wheel-nav');
-  const track = document.getElementById('wheelTrack');
-  if (!nav || !track) return;
-  const items = [
-    ["xenon.html","Xenon Smart"],
-    ["kiwi-packaging.html","Kiwi — Paketleme"],
-    ["kiwi-social.html","Kiwi &amp; Aprilla"],
-    ["ecrou.html","Ecrou"],
-    ["hukuk.html","Berru Toğaç"],
-    ["ozko.html","OZKO"],
-    ["ahmetrusan.html","Ahmet Ruşan"],
-  ];
-  const els = items.map(([href, label]) => {
-    const a = document.createElement('a');
-    a.href = href; a.className = 'wheel-item'; a.innerHTML = label;
-    track.appendChild(a);
-    return a;
-  });
-
-  let offset = 0; // px, translateY uygulanacak
-  const itemH = 34;
-  function render(){
-    const centerIndex = Math.round(-offset / itemH);
-    els.forEach((el, i) => {
-      const dist = i - (-offset/itemH);
-      const absDist = Math.abs(dist);
-      el.style.transform = `translateX(${Math.min(absDist*absDist*3, 26)}px) translateY(${dist*itemH}px) rotate(${Math.max(-6, Math.min(6, dist*3))}deg)`;
-      el.style.opacity = String(Math.max(0.25, 1 - absDist*0.35));
-      el.style.filter = `blur(${Math.min(absDist*0.6, 2)}px)`;
-      el.classList.toggle('active', i === ((centerIndex % els.length) + els.length) % els.length);
-    });
-    track.style.transform = `translateY(${nav.offsetHeight/2 - itemH/2}px)`;
-  }
-  render();
-
-  let dragging = false, startY = 0, startOffset = 0, moved = false;
-  function pointerDown(e){
-    dragging = true; moved = false;
-    startY = (e.touches ? e.touches[0].clientY : e.clientY);
-    startOffset = offset;
-  }
-  function pointerMove(e){
-    if (!dragging) return;
-    const y = (e.touches ? e.touches[0].clientY : e.clientY);
-    if (Math.abs(y - startY) > 4) moved = true;
-    offset = startOffset + (y - startY);
-    render();
-  }
-  function pointerUp(){
-    if (!dragging) return;
-    dragging = false;
-    const snapped = Math.round(offset / itemH) * itemH;
-    offset = snapped;
-    render();
-  }
-  track.addEventListener('mousedown', pointerDown);
-  track.addEventListener('touchstart', pointerDown, { passive:true });
-  window.addEventListener('mousemove', pointerMove);
-  window.addEventListener('touchmove', pointerMove, { passive:true });
-  window.addEventListener('mouseup', pointerUp);
-  window.addEventListener('touchend', pointerUp);
-  track.addEventListener('wheel', (e) => {
-    e.preventDefault();
-    offset -= e.deltaY * 0.5;
-    render();
-  }, { passive:false });
-  els.forEach(el => el.addEventListener('click', (e) => { if (moved) e.preventDefault(); }));
 })();
 </script>
 </body>
